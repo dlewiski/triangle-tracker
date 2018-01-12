@@ -10,16 +10,16 @@ $(document).ready(function() {
   // alert(sumSide1 + ", " + sumSide3 + ", " + sumSide2);
   if ((sumSide1 <= sidethree) || (sumSide2 <= sidetwo) || (sumSide3 <= sideone)) {
 
-    $("#noTriangle").show();
+    $("#noTriangle").text("Not a triange!");
 
-  } if (sideone === sidetwo && sidethree === sideone) {
-    $("#equal").show();
+  } else if (sideone === sidetwo && sidethree === sideone) {
+    $("#results").text("It's and equilateral triangle!");
 
-  } if ((sideone != sidetwo && sidetwo === sidethree) || (sideone === sidethree && sideone != sidetwo) || (sideone === sidetwo && sideone != sidethree)) {
-      $("#iso").show();
+  } else if ((sideone != sidetwo && sidetwo === sidethree) || (sideone === sidethree && sideone != sidetwo) || (sideone === sidetwo && sideone != sidethree)) {
+      $("#results").text("It's and isosceles triangle!");
 
-  } if ((sideone != sidetwo) && (sidethree != sideone)) {
-      $("#scalene").show();
+  } else if ((sideone != sidetwo) && (sidethree != sideone)) {
+      $("#results").text("It's and scalene triangle!");
 
     }
 
